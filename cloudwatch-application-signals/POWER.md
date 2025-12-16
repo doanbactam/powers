@@ -54,7 +54,7 @@ The AWS Application Signals Power provides comprehensive tools for monitoring an
 
 ## Available Steering Files
 
-- **steering** - Audit workflows, investigation patterns, and target format reference
+- **steering/steering.md** - Audit workflows, investigation patterns, and target format reference
 
 ## Available MCP Servers
 
@@ -259,8 +259,8 @@ audit_service_operations({
 ```javascript
 search_transaction_spans({
   "query_string": "FILTER attributes.aws.local.service = \"checkout-service\" and attributes.http.status_code >= 400 | STATS count() as error_count by attributes.aws.local.operation | LIMIT 20",
-  "start_time": "2024-01-15T10:00:00Z",
-  "end_time": "2024-01-15T11:00:00Z"
+  "start_time": "2025-01-15T10:00:00Z",
+  "end_time": "2025-01-15T11:00:00Z"
 })
 // Returns: Error counts by operation (100% sampled data)
 ```
